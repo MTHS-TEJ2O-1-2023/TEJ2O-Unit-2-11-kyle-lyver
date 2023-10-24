@@ -1,3 +1,5 @@
+
+
 /* Copyright (c) 2020 MTHS All rights reserved
  *
  * Created by: Kyle Lyver
@@ -13,13 +15,13 @@ basic.showIcon(IconNames.Happy)
 // give variable number
 let num0: number
 let num1: number
+num0 = randint(0, 99)
+num1 = randint(0, 99)
 
 // if else statement for if num0 is bigger than num1
 input.onGesture(Gesture.Shake, function () {
   if (num0 > num1) {
-    num0 = randint(0, 99)
     basic.showNumber(num0)
-    num1 = randint(0, 99)
     basic.showString('>')
     basic.showNumber(num1)
   } else {
@@ -27,6 +29,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.showString('<')
     basic.showNumber(num1)
   }
+  basic.showIcon(IconNames.Sad)
 })
 
 // display number 1
