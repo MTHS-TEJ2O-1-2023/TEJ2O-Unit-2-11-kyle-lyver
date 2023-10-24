@@ -2,32 +2,41 @@
  *
  * Created by: Kyle Lyver
  * Created on: Oct 2023
- * This program ...
+ * this program creates two numbers and compares the two numbers
 */
 
-// variable for random numbers
+// clean up
+basic.clearScreen()
+basic.pause(1000)
+basic.showIcon(IconNames.Happy)
+
+// give variable number
 let num0: number
 let num1: number
 
-// cleanup
-basic.clearScreen()
-basic.showIcon(IconNames.Happy)
+// if else statement for if num0 is bigger than num1
+input.onGesture(Gesture.Shake, function () {
+    if (num0 > num1) {
+        num0 = randint(0, 99)
+        basic.showNumber(num0)
+        num1 = randint(0, 99)
+        basic.showString('>')
+        basic.showNumber(num1)
+    } else {
+        basic.showNumber(num0)
+        basic.showString('<')
+        basic.showNumber(num1)
+    }
+})
 
-input.isGesture(Gesture.Shake.function() {
-  if(num0 > num1) {
-    num0 = randint(0, 99)
+// display number 1
+input.onButtonPressed(Button.A, function () {
+    basic.showString('#1')
     basic.showNumber(num0)
-    num1 = randint(0, 99)
-  }
 })
 
-input.onButtonPressed(Button.A, function() {
-    basic.clearScreen()
-    basic.showNumber(random_number0)
-})
-
-input.onButtonPressed(Button.A, function() {
-  basic.clearScreen()
-  let num1 = randint(0, 99)
-  basic.showNumber(random_number1)
+// display number 2
+input.onButtonPressed(Button.B, function () {
+    basic.showString('#2')
+    basic.showNumber(num1)
 })
