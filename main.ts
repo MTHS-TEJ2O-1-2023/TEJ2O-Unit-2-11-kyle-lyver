@@ -1,5 +1,3 @@
-
-
 /* Copyright (c) 2020 MTHS All rights reserved
  *
  * Created by: Kyle Lyver
@@ -34,12 +32,12 @@ input.onGesture(Gesture.Shake, function () {
 
 // display number 1
 input.onButtonPressed(Button.A, function () {
-  basic.showString('#1')
+  basic.showString('#1 :')
   basic.showNumber(num0)
 })
 
 // display number 2
 input.onButtonPressed(Button.B, function () {
-  basic.showString('#2')
+  basic.showString('#2 :')
   basic.showNumber(num1)
 })
